@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Survey</title>
+    <!--------------------------------------------- CSS & JS ---------------------------------------------->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    
+
+    <!------------------------------ Font Awesome Glyphicons from BootStrap ------------------------------>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+        <div class="jumbotron">
+          <h1>
+            <i class="fa fa-facebook-square" aria-hidden="true"></i> Friend Finder Survey
+          </h1>
+          <hr />
+          <h2>Answer a few basic questions.</h2>
+    </div>
+    <br>
+    <div class="card">
+            <div class="card-body">
+              <div class="card-title"></div>
+              <div class="card">
+                <h3 id="name">Name</h3>
+                <input class= "form-control" type="text" id="fullname" placeholder="Your full name.." required/>
+              </div>
+              <br />
+      
+              <div class="card">
+                <h3 id="img" >Link to photo Image (Required) </h3>
+                <input class= "form-control" type="text" id="uniqueid" placeholder="your photo link here" required />
+              </div>
+              <br />
+      
+            </div>
+            <div>
+            <!-------------Q1-------------->
+            <div class="input-group">
+                <div>
+                        <h3>
+
+                                What is your idea of a good night out?
+                        </h3>
+                </div>
+            </div>
+                
+                    
+                  
+                        <select class="custom-select" id="inputGroupSelect04 q1" aria-label="Example select with button addon">
+                                    <option selected>Choose...</option>
+                                    <option value="1">Romantic Dinner for two</option>
+                                    <option value="2">Karaoke at a local pub</option>
+                                    <option value="3">Watch a football game</option>
+                                    <option value="4">Go hiking!!!</option>
+                                    
+                        </select>
+
+                
+                    
+                    
+            </div>
+            <br>
+            <div>
+            <!-------------Q2-------------->
+            <div class="input-group">
+                    <h3>
+    
+                            How would you best describe your character?
+                    </h3>
+                </div>
+                        <select class="custom-select" id="inputGroupSelect04 q2" aria-label="Example select with button addon">
+                          <option selected>Choose...</option>
+                          <option value="1">Shy and Reserved</option>
+                          <option value="2">Expressive, Open and Chatty</option>
+                          <option value="3">Humorous, but hide feelings</option>
+                          <option value="4">Uncomplicated, easy-going</option>
+                          
+                        </select>
+                        
+                </div>
+
+            <!-------------Q3-------------->
+            <div>
+            <div class="input-group">
+                    <h3>
+    
+                            What are the most important characteristics in a partner?
+                    </h3>
+            </div>
+                        <select class="custom-select" id="inputGroupSelect04 q3" aria-label="Example select with button addon">
+                          <option selected>Choose...</option>
+                          <option value="1">Good looks and style</option>
+                          <option value="2">Loyal, kind and trustworthy</option>
+                          <option value="3">Sense of fun, ove for life</option>
+                          <option value="4">Dynamic and Successful</option>
+                          <option value="4">Passionate and Adventourous</option>
+                          
+                        </select>
+                        
+                </div>
+            <!-------------Q4-------------->
+            <div>
+            <div class="input-group">
+                    <h3>
+    
+                            You find it easy to stay relaxed and focused even when there is some pressure. 
+                    </h3>
+            </div>
+                    <hr>
+                        <select class="custom-select" id="inputGroupSelect04 q4" aria-label="Example select with button addon">
+                          <option selected>Choose...</option>
+                          <option value="1">1 (strongly disagree)</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="4">5 (strongly agree)</option>
+                          
+                        </select>
+                        
+                </div>
+
+            <!-------------Q5-------------->
+            <div>
+            <div class="input-group">
+                    <h3>
+    
+                            Generally speaking, you rely more on your experience than your imagination.
+                    </h3>
+            </div>
+                        <select class="custom-select" id="inputGroupSelect04 q5" aria-label="Example select with button addon">
+                          <option selected>Choose...</option>
+                          <option value="1">1 (strongly disagree)</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="4">5 (strongly agree)</option>
+                          
+                        </select>
+                        
+                </div>
+            <br>
+    
+    
+
+            <a href="#" class="btn btn-lg btn-primary" id="submit">Submit</a>
+            
+        
+          </div>
+          
+        
+  </body>
+  <!-------------------------------------------JQUERY-------------------------------------------------------->
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+  <!-------------------------------------------------SUBMIT DATA-------------------------------------------------------->
+  
+  <script type="text/javascript">
+    $("#submit").on("click", function() {
+      event.preventDefault();
+      let newFriend = {
+        name: $("#name")
+          .val()
+          .trim(),
+        image: $("#img")
+          .val()
+          .trim(),
+        scores: [
+          $('#q1').val(),
+          $('#q2').val(),
+          $('#q3').val(),
+          $('#q4').val(),
+          $('#q5').val(),
+        ]
+      }
+      $.post("/api/friends", newFriend).then(function(data) {
+        console.log("add.html", data);
+        alert("Adding a friend.......");
+      });
+    });
+  </script>
+</html>
